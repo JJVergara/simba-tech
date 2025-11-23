@@ -6,7 +6,6 @@ import { VideoDemos } from "@/components/landing/video-demos";
 import { FAQ } from "@/components/landing/faq";
 import { Footer } from "@/components/landing/footer";
 
-export default function Home() {
   return (
     <main className="min-h-screen bg-slate-900">
       <Navbar />
