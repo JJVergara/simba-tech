@@ -97,17 +97,17 @@ const features = [
 
 export function Features() {
   return (
-    <section id="features" className="py-24 px-4 bg-neutral-50">
+    <section id="features" className="py-24 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">
               Powerful Protection
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
               Body Cart uses cutting-edge AI to keep you safe from online threats while
               you shop
             </p>
@@ -119,16 +119,16 @@ export function Features() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-6 bg-white border border-neutral-200 rounded-2xl hover:border-neutral-300 transition-all duration-300 hover:shadow-sm"
+              className="group p-6 bg-white/5 border border-white/10 rounded-2xl hover:border-white/20 transition-all duration-300 hover:bg-white/10"
             >
               {/* Icon */}
-              <div className="w-14 h-14 bg-neutral-100 rounded-xl flex items-center justify-center text-black mb-4 group-hover:bg-neutral-200 transition-colors">
+              <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center text-white mb-4 group-hover:bg-white/20 transition-colors">
                 {feature.icon}
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-black mb-2 font-heading">{feature.title}</h3>
-              <p className="text-neutral-500 leading-relaxed">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-white mb-2 font-heading">{feature.title}</h3>
+              <p className="text-white/60 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </StaggerReveal>

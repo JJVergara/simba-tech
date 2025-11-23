@@ -25,17 +25,17 @@ const videos = [
 
 export function VideoDemos() {
   return (
-    <section id="demos" className="py-24 px-4 bg-neutral-50">
+    <section id="demos" className="py-24 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">
               See It In Action
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
               Watch how Body Cart protects you while shopping online
             </p>
           </ScrollReveal>
@@ -46,34 +46,34 @@ export function VideoDemos() {
           {videos.map((video, index) => (
             <div
               key={index}
-              className="group bg-white border border-neutral-200 rounded-2xl overflow-hidden hover:border-neutral-300 transition-all duration-300 hover:shadow-sm"
+              className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-white/20 transition-all duration-300 hover:bg-white/10"
             >
               {/* Video placeholder / embed area */}
-              <div className="relative aspect-video bg-neutral-100 flex items-center justify-center">
+              <div className="relative aspect-video bg-white/5 flex items-center justify-center">
                 {/* Placeholder content */}
                 <div className="text-center p-6">
-                  <div className="w-16 h-16 bg-neutral-200 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-neutral-300 transition-colors">
+                  <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white/20 transition-colors">
                     <svg
-                      className="w-8 h-8 text-neutral-500 ml-1"
+                      className="w-8 h-8 text-white/60 ml-1"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
                       <path d="M8 5v14l11-7z" />
                     </svg>
                   </div>
-                  <p className="text-neutral-400 text-sm">Video coming soon</p>
+                  <p className="text-white/40 text-sm">Video coming soon</p>
                 </div>
 
                 {/* Gradient overlay on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-white/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
 
               {/* Video info */}
               <div className="p-5">
-                <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-neutral-600 transition-colors font-heading">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-white/80 transition-colors font-heading">
                   {video.title}
                 </h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">
+                <p className="text-white/60 text-sm leading-relaxed">
                   {video.description}
                 </p>
               </div>
@@ -84,14 +84,14 @@ export function VideoDemos() {
         {/* Subscribe CTA */}
         <ScrollReveal delay={0.3}>
           <div className="mt-12 text-center">
-            <p className="text-neutral-500 mb-4">
+            <p className="text-white/60 mb-4">
               Subscribe to our channel for more tutorials and updates
             </p>
             <a
               href="https://youtube.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white border border-neutral-200 rounded-xl text-black hover:border-neutral-300 hover:bg-neutral-50 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 border border-white/20 rounded-xl text-white hover:border-white/30 hover:bg-white/20 transition-colors"
             >
               <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />

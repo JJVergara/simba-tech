@@ -49,17 +49,17 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-24 px-4 bg-white">
+    <section id="faq" className="py-24 px-4 bg-neutral-950">
       <div className="max-w-3xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">
               Frequently Asked Questions
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-xl text-neutral-500">
+            <p className="text-xl text-white/60">
               Everything you need to know about Body Cart
             </p>
           </ScrollReveal>
@@ -70,23 +70,23 @@ export function FAQ() {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-neutral-50 border border-neutral-200 rounded-xl overflow-hidden hover:border-neutral-300 transition-colors"
+              className="bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-white/20 transition-colors"
             >
               {/* Question button */}
               <button
                 onClick={() => toggleFaq(index)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left"
               >
-                <span className="text-lg font-medium text-black pr-4">
+                <span className="text-lg font-medium text-white pr-4">
                   {faq.question}
                 </span>
                 <span
-                  className={`shrink-0 w-8 h-8 bg-neutral-200 rounded-lg flex items-center justify-center transition-transform duration-300 ${
+                  className={`shrink-0 w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center transition-transform duration-300 ${
                     openIndex === index ? "rotate-180" : ""
                   }`}
                 >
                   <svg
-                    className="w-4 h-4 text-black"
+                    className="w-4 h-4 text-white"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -108,7 +108,7 @@ export function FAQ() {
                 }`}
               >
                 <div className="px-6 pb-5 pt-0">
-                  <p className="text-neutral-500 leading-relaxed">{faq.answer}</p>
+                  <p className="text-white/60 leading-relaxed">{faq.answer}</p>
                 </div>
               </div>
             </div>
@@ -118,10 +118,10 @@ export function FAQ() {
         {/* More questions CTA */}
         <ScrollReveal delay={0.3}>
           <div className="mt-12 text-center">
-            <p className="text-neutral-500 mb-4">Still have questions?</p>
+            <p className="text-white/60 mb-4">Still have questions?</p>
             <a
               href="mailto:support@bodycart.app"
-              className="inline-flex items-center gap-2 text-black hover:text-neutral-600 transition-colors"
+              className="inline-flex items-center gap-2 text-white hover:text-white/80 transition-colors"
             >
               <svg
                 className="w-5 h-5"

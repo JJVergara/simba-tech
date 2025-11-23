@@ -61,17 +61,17 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-24 px-4 bg-white">
+    <section id="how-it-works" className="py-24 px-4 bg-neutral-950">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
           <ScrollReveal>
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-heading">
               How It Works
             </h2>
           </ScrollReveal>
           <ScrollReveal delay={0.1}>
-            <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
+            <p className="text-xl text-white/60 max-w-2xl mx-auto">
               Get protected in under a minute with our simple 3-step setup
             </p>
           </ScrollReveal>
@@ -80,35 +80,35 @@ export function HowItWorks() {
         {/* Steps */}
         <div className="relative">
           {/* Connection line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-neutral-200 -translate-y-1/2" />
+          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-white/20 -translate-y-1/2" />
 
           <StaggerReveal className="grid lg:grid-cols-3 gap-8 lg:gap-12" stagger={0.15}>
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Card */}
-                <div className="relative bg-neutral-50 border border-neutral-200 rounded-2xl p-8 text-center hover:border-neutral-300 transition-colors">
+                <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8 text-center hover:border-white/20 transition-colors">
                   {/* Step number badge */}
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-black rounded-full text-white font-bold text-sm">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-white rounded-full text-black font-bold text-sm">
                     Step {step.number}
                   </div>
 
                   {/* Icon */}
-                  <div className="w-20 h-20 bg-neutral-100 rounded-2xl flex items-center justify-center text-black mx-auto mt-4 mb-6">
+                  <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-white mx-auto mt-4 mb-6">
                     {step.icon}
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-semibold text-black mb-3 font-heading">
+                  <h3 className="text-2xl font-semibold text-white mb-3 font-heading">
                     {step.title}
                   </h3>
-                  <p className="text-neutral-500 leading-relaxed">{step.description}</p>
+                  <p className="text-white/60 leading-relaxed">{step.description}</p>
                 </div>
 
                 {/* Arrow connector for mobile */}
                 {index < steps.length - 1 && (
                   <div className="lg:hidden flex justify-center my-4">
                     <svg
-                      className="w-6 h-6 text-neutral-300"
+                      className="w-6 h-6 text-white/30"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"

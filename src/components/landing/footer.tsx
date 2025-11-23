@@ -5,44 +5,44 @@ import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function Footer() {
   return (
-    <footer className="py-12 px-4 border-t border-neutral-200 bg-white">
+    <footer className="py-12 px-4 border-t border-white/10 bg-black">
       <div className="max-w-6xl mx-auto">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <span className="text-xl font-bold text-black">Body Cart</span>
+            <span className="text-xl font-bold text-white">Body Cart</span>
           </div>
 
           {/* Navigation */}
           <nav className="flex flex-wrap items-center justify-center gap-6 text-sm">
             <a
               href="#features"
-              className="text-neutral-500 hover:text-black transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               Features
             </a>
             <a
               href="#how-it-works"
-              className="text-neutral-500 hover:text-black transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               How It Works
             </a>
             <a
               href="#demos"
-              className="text-neutral-500 hover:text-black transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               Demos
             </a>
             <a
               href="#faq"
-              className="text-neutral-500 hover:text-black transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               FAQ
             </a>
             <Link
               href="/login"
-              className="text-neutral-500 hover:text-black transition-colors"
+              className="text-white/60 hover:text-white transition-colors"
             >
               Sign In
             </Link>
@@ -54,7 +54,7 @@ export function Footer() {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center text-neutral-500 hover:text-black hover:bg-neutral-200 transition-colors"
+              className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 transition-colors"
               aria-label="GitHub"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -69,7 +69,7 @@ export function Footer() {
               href="https://twitter.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 bg-neutral-100 rounded-lg flex items-center justify-center text-neutral-500 hover:text-black hover:bg-neutral-200 transition-colors"
+              className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-white/60 hover:text-white hover:bg-white/20 transition-colors"
               aria-label="Twitter"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <ScrollReveal delay={0.1}>
-          <div className="mt-10 pt-6 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+          <div className="mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/40">
             <p>&copy; {new Date().getFullYear()} Body Cart. All rights reserved.</p>
             <p>Made for a safer internet</p>
           </div>
