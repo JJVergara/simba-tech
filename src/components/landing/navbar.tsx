@@ -1,11 +1,20 @@
 "use client";
 
+import Image from "next/image";
 import PillNav from "@/components/ui/pill-nav";
 
 export function Navbar() {
   return (
     <PillNav
-      logoText="Body Cart"
+      logo={
+        <Image
+          src="/logo_cropped_white.png"
+          alt="Body Cart"
+          width={32}
+          height={32}
+          className="h-8 w-auto"
+        />
+      }
       items={[
         { label: 'Features', href: '#features' },
         { label: 'How It Works', href: '#how-it-works' },
