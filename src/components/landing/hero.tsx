@@ -48,7 +48,7 @@ export function Hero() {
 
       {/* Content */}
       <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
-        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6">
+        <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 font-heading">
           Body Cart
         </h1>
 

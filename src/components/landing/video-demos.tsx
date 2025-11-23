@@ -25,7 +25,7 @@ export function VideoDemos() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
             See It In Action
           </h2>
           <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
@@ -62,7 +62,7 @@ export function VideoDemos() {
 
               {/* Video info */}
               <div className="p-5">
-                <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-neutral-600 transition-colors">
+                <h3 className="text-lg font-semibold text-black mb-2 group-hover:text-neutral-600 transition-colors font-heading">
                   {video.title}
                 </h3>
                 <p className="text-neutral-500 text-sm leading-relaxed">

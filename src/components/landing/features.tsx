@@ -97,7 +97,7 @@ export function Features() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
             Powerful Protection
           </h2>
           <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ export function Features() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-black mb-2 font-heading">{feature.title}</h3>
               <p className="text-neutral-500 leading-relaxed">{feature.description}</p>
             </div>
           ))}
