@@ -1,11 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import ColorBends from "@/components/ui/color-bends";
 
 export function Hero() {
   const [showInstructions, setShowInstructions] = useState(false);
   const [copied, setCopied] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content) return;
+
+    const elements = content.children;
+
+    gsap.set(elements, {
+      y: 40,
+      opacity: 0,
+    });
+
+    gsap.to(elements, {
+      y: 0,
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out",
+      delay: 0.3,
+    });
+  }, []);
 
   const handleDownload = () => {
     setShowInstructions(true);
@@ -47,7 +70,7 @@ export function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-3xl mx-auto">
+      <div ref={contentRef} className="relative z-10 text-center px-6 max-w-3xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 font-heading">
           Body Cart
         </h1>

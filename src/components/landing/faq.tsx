@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ScrollReveal, StaggerReveal } from "@/components/ui/scroll-reveal";
 
 const faqs = [
   {
@@ -52,16 +53,20 @@ export function FAQ() {
       <div className="max-w-3xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
-            Frequently Asked Questions
-          </h2>
-          <p className="text-xl text-neutral-500">
-            Everything you need to know about Body Cart
-          </p>
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+              Frequently Asked Questions
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-xl text-neutral-500">
+              Everything you need to know about Body Cart
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* FAQ accordion */}
-        <div className="space-y-4">
+        <StaggerReveal className="space-y-4" stagger={0.08}>
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -108,31 +113,33 @@ export function FAQ() {
               </div>
             </div>
           ))}
-        </div>
+        </StaggerReveal>
 
         {/* More questions CTA */}
-        <div className="mt-12 text-center">
-          <p className="text-neutral-500 mb-4">Still have questions?</p>
-          <a
-            href="mailto:support@bodycart.app"
-            className="inline-flex items-center gap-2 text-black hover:text-neutral-600 transition-colors"
-          >
-            <svg
-              className="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
+        <ScrollReveal delay={0.3}>
+          <div className="mt-12 text-center">
+            <p className="text-neutral-500 mb-4">Still have questions?</p>
+            <a
+              href="mailto:support@bodycart.app"
+              className="inline-flex items-center gap-2 text-black hover:text-neutral-600 transition-colors"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
-            </svg>
-            Contact us
-          </a>
-        </div>
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                />
+              </svg>
+              Contact us
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

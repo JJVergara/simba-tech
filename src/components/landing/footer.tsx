@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export function Footer() {
   return (
     <footer className="py-12 px-4 border-t border-neutral-200 bg-white">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Brand */}
           <div className="flex items-center gap-3">
             <span className="text-xl font-bold text-black">Body Cart</span>
@@ -74,12 +78,15 @@ export function Footer() {
             </a>
           </div>
         </div>
+        </ScrollReveal>
 
         {/* Bottom bar */}
-        <div className="mt-10 pt-6 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
-          <p>&copy; {new Date().getFullYear()} Body Cart. All rights reserved.</p>
-          <p>Made for a safer internet</p>
-        </div>
+        <ScrollReveal delay={0.1}>
+          <div className="mt-10 pt-6 border-t border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-neutral-500">
+            <p>&copy; {new Date().getFullYear()} Body Cart. All rights reserved.</p>
+            <p>Made for a safer internet</p>
+          </div>
+        </ScrollReveal>
       </div>
     </footer>
   );

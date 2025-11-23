@@ -1,3 +1,7 @@
+"use client";
+
+import { ScrollReveal, StaggerReveal } from "@/components/ui/scroll-reveal";
+
 const features = [
   {
     icon: (
@@ -97,17 +101,21 @@ export function Features() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
-            Powerful Protection
-          </h2>
-          <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
-            Body Cart uses cutting-edge AI to keep you safe from online threats while
-            you shop
-          </p>
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+              Powerful Protection
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
+              Body Cart uses cutting-edge AI to keep you safe from online threats while
+              you shop
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Features grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerReveal className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" stagger={0.1}>
           {features.map((feature, index) => (
             <div
               key={index}
@@ -123,7 +131,7 @@ export function Features() {
               <p className="text-neutral-500 leading-relaxed">{feature.description}</p>
             </div>
           ))}
-        </div>
+        </StaggerReveal>
       </div>
     </section>
   );

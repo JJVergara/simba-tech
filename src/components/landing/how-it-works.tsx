@@ -1,3 +1,7 @@
+"use client";
+
+import { ScrollReveal, StaggerReveal } from "@/components/ui/scroll-reveal";
+
 const steps = [
   {
     number: "01",
@@ -61,12 +65,16 @@ export function HowItWorks() {
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
-            How It Works
-          </h2>
-          <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
-            Get protected in under a minute with our simple 3-step setup
-          </p>
+          <ScrollReveal>
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 font-heading">
+              How It Works
+            </h2>
+          </ScrollReveal>
+          <ScrollReveal delay={0.1}>
+            <p className="text-xl text-neutral-500 max-w-2xl mx-auto">
+              Get protected in under a minute with our simple 3-step setup
+            </p>
+          </ScrollReveal>
         </div>
 
         {/* Steps */}
@@ -74,7 +82,7 @@ export function HowItWorks() {
           {/* Connection line */}
           <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-neutral-200 -translate-y-1/2" />
 
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-12">
+          <StaggerReveal className="grid lg:grid-cols-3 gap-8 lg:gap-12" stagger={0.15}>
             {steps.map((step, index) => (
               <div key={index} className="relative">
                 {/* Card */}
@@ -116,7 +124,7 @@ export function HowItWorks() {
                 )}
               </div>
             ))}
-          </div>
+          </StaggerReveal>
         </div>
       </div>
     </section>
