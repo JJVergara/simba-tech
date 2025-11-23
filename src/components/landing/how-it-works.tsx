@@ -57,19 +57,19 @@ export function HowItWorks() {
           <StaggerReveal className="grid lg:grid-cols-3 gap-8 lg:gap-12" stagger={0.15}>
             {steps.map((step, index) => (
               <div key={index} className="relative pt-4">
+                {/* Step number badge - outside PixelCard to avoid overflow clip */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 px-4 py-1 bg-white rounded-full text-black font-bold text-sm z-20">
+                  Paso {step.number}
+                </div>
+
                 {/* Card */}
                 <PixelCard
                   variant="dark"
                   className="bg-white/5 border-white/10 hover:border-white/20"
                 >
-                  <div className="p-8 text-center">
-                    {/* Step number badge */}
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-white rounded-full text-black font-bold text-sm z-20">
-                      Paso {step.number}
-                    </div>
-
+                  <div className="p-8 pt-6 text-center">
                     {/* Icon */}
-                    <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-white mx-auto mt-2 mb-6">
+                    <div className="w-20 h-20 bg-white/10 rounded-2xl flex items-center justify-center text-white mx-auto mb-6">
                       {step.icon}
                     </div>
 
